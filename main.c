@@ -50,7 +50,12 @@ int main(void)
 	 P2IE |= SWD_BIT;                                 //interupt set on SWD
 	 P2IES &= ~SWD_BIT;		                         //LOW TO HIGH EDGE SELECTED
 	 _BIS_SR(GIE);        	                        // Enter w/interrupt
-
+        
+        /* else,
+        while(!(swd pin & swd bit); - waits for swd pin to go high
+        run the loop
+        */
+        
 
 
 	 return 0;
